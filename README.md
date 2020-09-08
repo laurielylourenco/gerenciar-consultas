@@ -1,4 +1,4 @@
-#Sistema gerenciar consulta
+# Gerenciar consulta
 
 Esse sistema inspirado na situação do consultorio do meu dentista, pois sempre vou la observo que secretaria esta sempre mexendo com muitos papeis para gerenciar as consultas.Bom eu estou fazendo uma solução pra esse consultorio eles só não sabem kkkkk.
 
@@ -19,5 +19,7 @@ Bom sistema onde cadastra os pacientes é as consultas, CRUD para ambos.Na View 
 
 #### Não tem um create para os dentista gero seus nomes automaticamente pelo factories só rodar.
 	php artisan db:seed 
+**Em caso de erros,bugs é talvez deixar uma dica de como melhorar o codigo faça issues por favor!!!**
+
 ## License
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
