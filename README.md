@@ -17,7 +17,7 @@ Bom sistema onde cadastra os pacientes é as consultas, CRUD para ambos.Na View 
 	DB_USERNAME=mude_aqui_seu_usarname
 	DB_PASSWORD=mude_aqui_sua_senha
 
-#### Não tem um create para os dentista gero seus nomes automaticamente pelo factories só rodar.
+#### Não tem um create para classe dentista gero seus nomes automaticamente pelo factories só rodar.
 	php artisan db:seed 
 **Em caso de erros,bugs é talvez deixar uma dica de como melhorar o codigo faça issues por favor!!!**
 
