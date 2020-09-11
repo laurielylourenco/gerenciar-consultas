@@ -1,5 +1,15 @@
 @extends('layouts/app')
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger mt-2">
+      <ul>
+          @foreach ($errors->all() as $error)
+          
+            <li>{{ $error }}</li>
+          @endforeach
+      </ul>
+    </div><br />
+  @endif
 <form action="{{ route('consulta.store') }}" method="post">
     <div class="mt-4 form-group">
      @csrf
