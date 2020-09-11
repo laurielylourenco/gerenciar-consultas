@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Consulta;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\ConsultaRequest;
 class ConsultaController extends Controller
 {
     /**
@@ -37,7 +37,7 @@ class ConsultaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ConsultaRequest $request)
     {
         $consulta = new Consulta;
 

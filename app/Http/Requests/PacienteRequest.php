@@ -30,4 +30,15 @@ class PacienteRequest extends FormRequest
             'number_house' => 'required',
         ];
     }
+
+
+    public function messages()
+    {
+       return[
+        'name.required' => 'Nome não digitado',
+        'phone.regex' => 'celular:(xx)9xxxx-xxxx ou fixo:(xx)xxxx-xxxx',
+        'street.required' => 'Rua nao digitado',
+        'number_house' => 'Numero nao digitado'
+       ];
+    }
 }

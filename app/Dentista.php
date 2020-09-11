@@ -8,8 +8,6 @@ class Dentista extends Model
 {
     protected $table = 'dentistas';
 
- 
-
     protected function consulta(){
         return $this->hasMany('App\Consulta');
     }
