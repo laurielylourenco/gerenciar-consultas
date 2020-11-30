@@ -12,6 +12,6 @@ class Paciente extends Model
         'phone', 'name', 'street', 'number_house'
     ];
     protected function consulta(){
-        return $this->hasMany('App/Consulta');
+        return $this->hasMany(Consulta::class);
     }
 }

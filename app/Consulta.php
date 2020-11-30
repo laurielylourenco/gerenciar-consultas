@@ -12,13 +12,13 @@ class Consulta extends Model
     protected $fillable = [
         'name', 'day', 'process', 'hours', 'dentist','money'
     ];
-    //protected $dateFormat = "d-m-y";
+    
 
     protected function paciente(){
-        return $this->belongsTo('App\Paciente');
+        return $this->belongsTo(Paciente::class);
     }
     protected function dentista(){
-        return $this->belongsTo('App\Dentista');  
+        return $this->belongsTo(Dentista::class);  
     } 
 
     protected function getPaciente(){
@@ -32,6 +32,13 @@ class Consulta extends Model
         $user = DB::table('dentistas')->select('name')->get();
             return $user;
     }
+
+    protected function getDentistaID($nome){  
+        $dentista = DB::table('dentistas')->select('id')->where('name','=', $nome)->get();
+        return $dentista;
+    }
+
+   
 
     protected function getConsultasDoDia(){
         $diaAtual = Carbon::now();

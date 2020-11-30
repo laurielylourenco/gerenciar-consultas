@@ -15,6 +15,8 @@ class CreateConsultas extends Migration
     {
         Schema::create('consultas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('dentista_id');
+            
             $table->char('name',100);
             $table->char('dentist',100);
             $table->char('process',100);
@@ -22,6 +24,11 @@ class CreateConsultas extends Migration
             $table->time('hours');
             $table->decimal('money', 8, 2);
             $table->timestamps();
+
+
+
+            $table->foreign('dentista_id')->references('id')->on('dentistas');
+           
         });
     }
 

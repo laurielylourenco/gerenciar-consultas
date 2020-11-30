@@ -40,15 +40,14 @@ class ConsultaController extends Controller
     public function store(ConsultaRequest $request)
     {
         $consulta = new Consulta;
-
+       
         $consulta->name = $request->name;
         $consulta->day = $request->day;
         $consulta->process = $request->process;
         $consulta->hours = $request->hours;
         $consulta->dentist = $request->dentist;
+    
         $consulta->money = $request->money;
-
-
         if ($consulta->process == "canal") {
             $consulta->money = 550.00;
         }elseif ($consulta->process == "aparelho") {
@@ -58,6 +57,8 @@ class ConsultaController extends Controller
         }else{
             echo "valor nao encontrado";
         }
+        $idDentista =  Consulta::getDentistaID($consulta->dentist);
+        $consulta->dentista_id  = $idDentista['0']->id; 
         $consulta->save();
         return redirect('/consulta/create');
     }
